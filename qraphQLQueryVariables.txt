@@ -1,0 +1,5 @@
+{
+  "delRes": 2,
+  "rid": 1,
+  "rstring": "New Clydes"
+}

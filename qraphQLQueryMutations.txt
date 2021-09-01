@@ -1,0 +1,47 @@
+query getRestaurant ($rid: Int!){
+  restaurant (id: $rid){
+    id
+    name
+    description
+    dishes {
+      name
+      price
+    }     
+  }
+}
+
+query getRestaurants {
+  restaurants {
+    id
+    name
+    description
+    dishes {
+      name
+      price
+    } 
+  }
+}
+
+
+mutation setRestaurant {
+  setrestaurant (input: {
+    name: "Plaza Azteca",
+    description: "Authentic Mexican"
+  }) {
+    name
+    description
+  }
+}
+
+mutation deleteRestaurant($delRes: Int!){
+  deleterestaurant(id:$delRes) {
+    ok
+  }
+}
+
+mutation editRestaurant($rid:Int!, $rstring:String!){
+  editrestaurant(id:$rid, name:$rstring){
+    name
+    description    
+  }
+}
